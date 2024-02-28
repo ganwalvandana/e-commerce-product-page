@@ -1,104 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ecommerce Product Page</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Dancing+Script:wght@400..700&family=Figtree:ital,wght@0,300..900;1,300..900&family=Lilita+One&family=Outfit:wght@100..900&family=Protest+Revolution&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ultra&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Dancing+Script:wght@400..700&family=Figtree:ital,wght@0,300..900;1,300..900&family=Lilita+One&family=Outfit:wght@100..900&family=Protest+Revolution&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ultra&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+  </head>
+  <body>
     <header>
-        <div id="headerLinks">
+      <div id="headerLinks">
         <h1 id="logo">sneakers</h1>
-            <a>Collection</a>
-            <a>Men</a>
-            <a>Women</a>
-            <a>About</a>
-            <a>Contact</a>
-        </div>
-        <div id="headerProfile">
-            <i id="headerCart" class="bi bi-cart3"></i>
-            <img id="profileImg" src="images/image-avatar.png" alt="">
-        </div>
-        
-        
+        <a>Collection</a>
+        <a>Men</a>
+        <a>Women</a>
+        <a>About</a>
+        <a>Contact</a>
+      </div>
+      <div id="headerProfile">
+        <i id="headerCartIcon" class="bi bi-cart3"></i>
+        <img id="headerProfileImg" src="images/image-avatar.png" alt="" />
+      </div>
     </header>
-    <hr>
-
-    <div class="container">
-        <div id="productImageContainer">
-            <div id="productImg">
-                <img id="mainImg" src="images/image-product-1.jpg" alt="">
-            </div>
-            <div class="thumbnailImage">
-                <div id="product1Thumbnail" class="thumbnail">
-                    <img src="images/image-product-1-thumbnail.jpg" alt="">
-                </div>
-                <div id="product2Thumbnail" class="thumbnail">
-                    <img src="images/image-product-2-thumbnail.jpg" alt="">
-                </div>
-                <div id="product3Thumbnail" class="thumbnail">
-                    <img src="images/image-product-3-thumbnail.jpg" alt="">
-                </div>
-                <div id="product4Thumbnail" class="thumbnail">
-                    <img src="images/image-product-4-thumbnail.jpg" alt="">
-                </div>
-            </div>
-        </div>
-
-
-        <div id="productInfo">
-            <h4>Sneaker company</h4>
-            <h1>Fall limited Edition Sneakers</h1>
-            <p>These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole,
-                they'll withstand everything the weather can offer. 
-            </p>
-            <div class="price">
-                <h1 id="presentPrice"> $125.00</h1>
-                <div class="discount"> 50%</div>
-            </div>
-            <p class="originalPrice"> $250.00 </p>
-            <div class="cart">
-                <div class="plusMinus">
-                    <div onclick="removeItems()" id="minus">
-                        <i class="bi bi-dash"></i>
-                    </div>
-                    <div id="count">
-                        <h3>0</h3>
-                    </div>
-                    <div onclick="addItems()" id="plus">
-                        <i class="bi bi-plus"></i>
-                    </div>
-                </div>
-    
-                <button> 
-                    <i class="bi bi-cart3"></i>
-                    Add to cart
-                </button>
-            </div>
-        </div>
-        
+    <hr />
+    <div id="cartContainer">
+      <h4 id="cartHeading">Cart</h4>
+      <hr />
+      <p class="cartPara">Your cart is empty.</p>
     </div>
-    
+    <section>
+      <div id="productImgContainer">
+        <img id="mainImg" src="images/image-product-1.jpg" alt="" />
+        <div class="thumbnailImgContainer">
+          <div class="thumbnail">
+            <img src="images/image-product-1-thumbnail.jpg" alt="" />
+          </div>
+          <div class="thumbnail">
+            <img src="images/image-product-2-thumbnail.jpg" alt="" />
+          </div>
+          <div class="thumbnail">
+            <img src="images/image-product-3-thumbnail.jpg" alt="" />
+          </div>
+          <div class="thumbnail">
+            <img src="images/image-product-4-thumbnail.jpg" alt="" />
+          </div>
+        </div>
+      </div>
 
+      <div id="productInfo">
+        <h4>Sneaker company</h4>
+        <h1>Fall limited Edition Sneakers</h1>
+        <p>
+          These low-profile sneakers are your perfect casual wear companion.
+          Featuring a durable rubber outer sole, they'll withstand everything
+          the weather can offer.
+        </p>
+        <div class="price">
+          <h1 id="presentPrice">$125.00</h1>
+          <div class="discount">50%</div>
+        </div>
+        <p class="originalPrice">$250.00</p>
+        <div class="cart">
+          <div class="plusMinus">
+            <div id="minus" onclick="updateCounter(-1)">
+              <i class="bi bi-dash"></i>
+            </div>
+            <div id="count">
+              <h3>0</h3>
+            </div>
+            <div id="plus" onclick="updateCounter(1)">
+              <i class="bi bi-plus"></i>
+            </div>
+          </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
+          <button>
+            <i class="bi bi-cart3"></i>
+            Add to cart
+          </button>
+        </div>
+      </div>
+    </section>
 
     <script src="app.js"></script>
-</body>
+  </body>
 </html>
